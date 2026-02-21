@@ -1,0 +1,100 @@
+index.html
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secret Love Page</title>
+<style>
+body{
+    margin:0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    text-align:center;
+    color:white;
+}
+.container{
+    margin-top:100px;
+}
+input{
+    padding:10px;
+    border:none;
+    border-radius:20px;
+    text-align:center;
+}
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:white;
+    color:#ff4b6e;
+    cursor:pointer;
+    margin-top:10px;
+}
+.hidden{
+    display:none;
+}
+.love-box{
+    margin-top:50px;
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+h1{
+    font-size:40px;
+}
+p{
+    font-size:20px;
+    max-width:600px;
+    margin:auto;
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="login">
+    <h1>🔐 الصفحة السرية</h1>
+    <p>ادخلي الباسورد يا يارا 🤍</p>
+    <input type="password" id="password" placeholder="الباسورد">
+    <br>
+    <button onclick="checkPassword()">فتح الصفحة</button>
+</div>
+
+<div class="container hidden" id="content">
+    <div class="love-box">
+        <h1>هشام ❤️ يارا</h1>
+        <h2>27/12/2023</h2>
+        <p>
+        هفضل احبك طول ما فيا نفس...  
+        و حتى لو نفسي اتقطع هيكون و انا ف حضنك 🤍
+        </p>
+
+        <br><br>
+
+        <iframe width="300" height="170"
+        src="https://www.youtube.com/embed/iMZ1skkbUWI"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+        </iframe>
+
+        <h3 style="margin-top:30px;">💍 دي حكايتنا و لسه البداية 💍</h3>
+    </div>
+</div>
+
+<script>
+function checkPassword(){
+    var pass = document.getElementById("password").value;
+    if(pass === "2712YH"){
+        document.getElementById("login").style.display="none";
+        document.getElementById("content").classList.remove("hidden");
+    } else {
+        alert("الباسورد غلط يا يارا 🙈");
+    }
+}
+</script>
+
+</body>
+</html>
